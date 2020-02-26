@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # My apps
+    'polls',  # 'polls.apps.PollsConfig'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
+        'APP_DIRS': True,  # Search templates for each app in dir templates
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -105,12 +107,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Minsk'  # Europe/Minsk
 
 USE_I18N = True
 
 USE_L10N = True
 
+# if USE_TZ == True now() returns time in UTC, else time in timezone
 USE_TZ = True
 
 
